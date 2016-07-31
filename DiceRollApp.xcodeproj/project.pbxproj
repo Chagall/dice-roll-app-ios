@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3006E81D4D9D6D00CEADEB /* Die.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3006E71D4D9D6D00CEADEB /* Die.swift */; };
+		0C3006EB1D4D9EB500CEADEB /* DieTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3006EA1D4D9EB500CEADEB /* DieTable.swift */; };
 		338B27A71D4BFF2A00EBD465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B27A61D4BFF2A00EBD465 /* AppDelegate.swift */; };
 		338B27A91D4BFF2A00EBD465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B27A81D4BFF2A00EBD465 /* ViewController.swift */; };
 		338B27AC1D4BFF2A00EBD465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338B27AA1D4BFF2A00EBD465 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C3006E71D4D9D6D00CEADEB /* Die.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Die.swift; sourceTree = "<group>"; };
+		0C3006EA1D4D9EB500CEADEB /* DieTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieTable.swift; sourceTree = "<group>"; };
 		338B27A31D4BFF2A00EBD465 /* DiceRollApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRollApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338B27A61D4BFF2A00EBD465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338B27A81D4BFF2A00EBD465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C3006E61D4D9D5700CEADEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3006E71D4D9D6D00CEADEB /* Die.swift */,
+				0C3006EA1D4D9EB500CEADEB /* DieTable.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		338B279A1D4BFF2A00EBD465 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 		338B27A51D4BFF2A00EBD465 /* DiceRollApp */ = {
 			isa = PBXGroup;
 			children = (
+				0C3006E61D4D9D5700CEADEB /* Model */,
 				338B27A61D4BFF2A00EBD465 /* AppDelegate.swift */,
 				338B27A81D4BFF2A00EBD465 /* ViewController.swift */,
 				338B27D41D4C021000EBD465 /* Assets.xcassets */,
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				338B27A91D4BFF2A00EBD465 /* ViewController.swift in Sources */,
+				0C3006E81D4D9D6D00CEADEB /* Die.swift in Sources */,
 				338B27A71D4BFF2A00EBD465 /* AppDelegate.swift in Sources */,
+				0C3006EB1D4D9EB500CEADEB /* DieTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DiceRollApp/Info.plist;
@@ -416,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DiceRollApp/Info.plist;

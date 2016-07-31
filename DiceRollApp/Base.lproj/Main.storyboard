@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,38 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="felt" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-2d-iGx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="felt" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-2d-iGx" userLabel="DieTable">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="cfe-tP-18m">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Soma : ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msq-0L-pjx">
+                                <rect key="frame" x="254" y="0.0" width="92" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="cfe-tP-18m" userLabel="dieOne">
                                 <rect key="frame" x="0.0" y="250" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="kfE-Uq-JPj"/>
                                     <constraint firstAttribute="width" constant="100" id="xgm-sr-5JC"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-u9-wD8">
-                                <rect key="frame" x="0.0" y="250" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="dice2" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-u9-wD8" userLabel="dieTwo">
+                                <rect key="frame" x="246" y="259" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6Nd-QF-vdb"/>
                                     <constraint firstAttribute="width" constant="100" id="XLU-uz-HmW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Soma : ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msq-0L-pjx">
-                                <rect key="frame" x="255" y="0.0" width="92" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-Oh-MHY">
+                                <rect key="frame" x="261" y="0.0" width="80" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="cqa-3c-zDY"/>
+                                    <constraint firstAttribute="height" constant="40" id="xJP-hP-pm9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Roll"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="161" y="734" width="79" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="rollTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOz-co-mQO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Msq-0L-pjx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0vS-u8-lWS"/>
+                            <constraint firstAttribute="bottom" secondItem="hlA-Oh-MHY" secondAttribute="bottom" constant="30" id="1QH-a0-1eo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0PU-2d-iGx" secondAttribute="bottom" id="5R3-r3-0E0"/>
+                            <constraint firstAttribute="trailing" secondItem="Pze-u9-wD8" secondAttribute="trailing" constant="50" id="AIB-jz-Pki"/>
                             <constraint firstItem="0PU-2d-iGx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ci8-xN-Pub"/>
                             <constraint firstAttribute="trailing" secondItem="0PU-2d-iGx" secondAttribute="trailing" id="DnZ-7J-d6z"/>
+                            <constraint firstItem="cfe-tP-18m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="Ejn-cf-TZM"/>
                             <constraint firstItem="0PU-2d-iGx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jhg-hd-pTy"/>
                             <constraint firstItem="cfe-tP-18m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Rf8-sM-iHn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hlA-Oh-MHY" secondAttribute="bottom" constant="20" id="TtJ-zU-doX"/>
+                            <constraint firstItem="Msq-0L-pjx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="XpG-a5-o1B"/>
+                            <constraint firstItem="hlA-Oh-MHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFa-ob-SuZ"/>
                             <constraint firstItem="Msq-0L-pjx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="bob-su-Ltc"/>
                             <constraint firstAttribute="trailing" secondItem="Pze-u9-wD8" secondAttribute="trailing" constant="20" id="dGW-VV-KcJ"/>
                             <constraint firstItem="cfe-tP-18m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m6e-6v-WaP"/>
@@ -56,19 +78,38 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="bob-su-Ltc"/>
-                                <exclude reference="dGW-VV-KcJ"/>
+                                <exclude reference="Ejn-cf-TZM"/>
                                 <exclude reference="Rf8-sM-iHn"/>
+                                <exclude reference="XpG-a5-o1B"/>
+                                <exclude reference="bob-su-Ltc"/>
+                                <exclude reference="1QH-a0-1eo"/>
+                                <exclude reference="AIB-jz-Pki"/>
+                                <exclude reference="dGW-VV-KcJ"/>
+                                <exclude reference="TtJ-zU-doX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ejn-cf-TZM"/>
+                                <include reference="XpG-a5-o1B"/>
+                                <include reference="AIB-jz-Pki"/>
+                                <include reference="TtJ-zU-doX"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="bob-su-Ltc"/>
-                                <include reference="dGW-VV-KcJ"/>
                                 <include reference="Rf8-sM-iHn"/>
+                                <include reference="bob-su-Ltc"/>
+                                <include reference="1QH-a0-1eo"/>
+                                <include reference="dGW-VV-KcJ"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="firstDieImageView" destination="cfe-tP-18m" id="kGL-q8-tfk"/>
+                        <outlet property="secondDieImageView" destination="Pze-u9-wD8" id="raF-9p-jaA"/>
+                        <outlet property="sumLabel" destination="Msq-0L-pjx" id="L4P-PV-tMS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
